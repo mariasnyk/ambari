@@ -1167,9 +1167,10 @@ sax@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.2.tgz#fd8631a23bc7826bef5d871bdb87378c95647828"
 
-scaffolt@^0.4.3:
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/scaffolt/-/scaffolt-0.4.3.tgz#eafa6eb31b733b79435cd7e24053de49cd2e145e"
+scaffolt@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/scaffolt/-/scaffolt-0.5.0.tgz#bc8ebdf97b551872b27a5c1dd419661d63ef8683"
+  integrity sha512-sCM/2ANmBK4uzuZiMvgMXZ932N+zDquZCGiROuCX6+mXzcM80LOVxbsGMiIguIRFrtTqYepWf0H8KLCLYG6dBA==
   dependencies:
     async-each "~0.1.1"
     commander "~1.2.0"
