@@ -23,7 +23,7 @@
   <description>Ambari Server</description>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <python.ver>python &gt;= 2.6</python.ver>
+    <python.ver>python >= 2.6</python.ver>
     <!-- On centos the python xml's are inside python package -->
     <deb.architecture>amd64</deb.architecture>
     <custom.tests>false</custom.tests>
@@ -134,20 +134,17 @@
             <configuration>
               <tasks>
                 <jar destfile="target/DBConnectionVerification.jar">
-                  <fileset dir="${basedir}/target/classes/"
-                    includes="**/DBConnectionVerification.class" />
+                  <fileset dir="${basedir}/target/classes/" includes="**/DBConnectionVerification.class"/>
                   <manifest>
-                    <attribute name="Main-Class"
-                      value="org.apache.ambari.server.DBConnectionVerification" />
+                    <attribute name="Main-Class" value="org.apache.ambari.server.DBConnectionVerification"/>
                   </manifest>
                 </jar>
                 <jar destfile="target/CredentialUtil.jar">
                   <fileset dir="${basedir}/target/classes/">
-                    <include name="**/CredentialUtil*.class" />
+                    <include name="**/CredentialUtil*.class"/>
                   </fileset>
                   <manifest>
-                    <attribute name="Main-Class"
-                               value="org.apache.ambari.server.credentialapi.CredentialUtil" />
+                    <attribute name="Main-Class" value="org.apache.ambari.server.credentialapi.CredentialUtil"/>
                   </manifest>
                 </jar>
               </tasks>
@@ -167,9 +164,9 @@
               <target>
                 <copy todir="${ambari-admin-dir}/target" flatten="true">
                   <fileset dir="${contrib-views-dir}">
-                    <include name="*/target/*jar" />
-                    <exclude name="**/ambari-views-utils*jar" />
-                    <exclude name="**/ambari-views-commons*jar" />
+                    <include name="*/target/*jar"/>
+                    <exclude name="**/ambari-views-utils*jar"/>
+                    <exclude name="**/ambari-views-commons*jar"/>
                   </fileset>
                 </copy>
               </target>
@@ -428,7 +425,7 @@
               <swaggerApiReader>org.apache.ambari.swagger.AmbariSwaggerReader</swaggerApiReader>
               <springmvc>false</springmvc>
               <locations>org.apache.ambari.server.api.services</locations>
-              <schemes></schemes>
+              <schemes/>
               <basePath>/api/v1</basePath>
               <info>
                 <title>Swagger spec for Ambari REST API</title>
@@ -697,8 +694,7 @@
               <outputDir>${project.basedir}/target/findbugs</outputDir>
               <stylesheet>fancy-hist.xsl</stylesheet>
               <fileMappers>
-                <fileMapper
-                        implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
+                <fileMapper implementation="org.codehaus.plexus.components.io.filemappers.FileExtensionMapper">
                   <targetExtension>.html</targetExtension>
                 </fileMapper>
               </fileMappers>
@@ -861,12 +857,11 @@
                 </goals>
                 <configuration>
                   <target name="ambari-server-compile">
-                    <exec dir="${basedir}" executable="bash"
-                      failonerror="true">
-                      <arg value="${basedir}/set-hdp-repo-url.sh" />
-                      <arg value="${hdpUrlForCentos6}" />
-                      <arg value="${hdpLatestUrl}" />
-                      <arg value="${basedir}" />
+                    <exec dir="${basedir}" executable="bash" failonerror="true">
+                      <arg value="${basedir}/set-hdp-repo-url.sh"/>
+                      <arg value="${hdpUrlForCentos6}"/>
+                      <arg value="${hdpLatestUrl}"/>
+                      <arg value="${basedir}"/>
                     </exec>
                   </target>
                 </configuration>
@@ -1028,7 +1023,7 @@
         <executable.python>${project.basedir}/../ambari-common/src/main/unix/ambari-python-wrap</executable.python>
         <executable.shell>sh</executable.shell>
         <fileextension.shell>sh</fileextension.shell>
-        <fileextension.dot.shell-default></fileextension.dot.shell-default>
+        <fileextension.dot.shell-default/>
         <path.python.1>${project.basedir}/../ambari-common/src/main/python:${project.basedir}/../ambari-agent/src/main/python:${project.basedir}/../ambari-common/src/main/python/ambari_jinja2:${project.basedir}/../ambari-common/src/main/python/ambari_commons:${project.basedir}/../ambari-common/src/test/python:${project.basedir}/src/main/python:${project.basedir}/src/main/python/ambari-server-state:${project.basedir}/src/main/resources/custom_actions:${project.basedir}/src/main/resources/scripts:${project.basedir}/src/test/python</path.python.1>
         <assemblydescriptor>src/main/assemblies/server.xml</assemblydescriptor>
       </properties>
@@ -1194,7 +1189,7 @@
     <dependency>
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
-      <version>1.4.193</version>
+      <version>2.1.210</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.security</groupId>
