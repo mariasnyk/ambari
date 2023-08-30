@@ -11,7 +11,9 @@
     "node": "~0.6.10 || 0.8 || 0.9"
   },
   "scripts": {
-    "start": "brunch watch --server"
+    "start": "brunch watch --server",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
     "javascript-brunch": "^1.7.1",
@@ -19,10 +21,11 @@
     "uglify-js-brunch": "^1.7.7",
     "clean-css-brunch": "^1.7.1",
     "bower": "^1.2.8",
-    "brunch": "^1.7.13",
+    "brunch": "^2.0.0",
     "scaffolt": "^0.4.3",
     "ember-precompile-brunch": "^0.1.0",
-    "less-brunch": "^1.7.2"
+    "less-brunch": "^1.7.2",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {},
   "ignore": [
@@ -31,5 +34,6 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "snyk": true
 }
