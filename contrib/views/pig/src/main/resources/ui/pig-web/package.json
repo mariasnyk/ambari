@@ -6,22 +6,26 @@
   },
   "scripts": {
     "test": "node_modules/phantomjs/bin/phantomjs runner.js public/tests.html",
-    "start": "brunch watch --server"
+    "start": "brunch watch --server",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "dependencies": {
-    "brunch": "1.7.17",
+    "brunch": "2.0.0",
     "javascript-brunch": ">= 1.0 < 1.8",
     "css-brunch": ">= 1.0 < 1.8",
     "uglify-js-brunch": ">= 1.0 < 1.8",
     "bower": ">= 1.2.0",
     "ember-precompile-brunch": "^0.1.0",
-    "less-brunch": "~1.7.1",
-    "scaffolt": "^0.4.3"
+    "less-brunch": "~1.8.0",
+    "scaffolt": "^0.4.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "phantomjs": "^1.9.2",
     "karma": "*",
     "karma-qunit": "*",
     "karma-phantomjs-launcher": "~0.1.2"
-  }
+  },
+  "snyk": true
 }
