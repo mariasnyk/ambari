@@ -12,10 +12,10 @@
     "brunch": "1.7.17",
     "javascript-brunch": ">= 1.0 < 1.8",
     "css-brunch": ">= 1.0 < 1.8",
-    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "uglify-js-brunch": ">=2.10.0",
     "bower": ">= 1.2.0",
     "ember-precompile-brunch": "^0.1.0",
-    "less-brunch": "~1.7.1",
+    "less-brunch": "~2.10.0",
     "scaffolt": "^0.4.3"
   },
   "devDependencies": {
