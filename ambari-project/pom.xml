@@ -42,7 +42,7 @@
     <spring.version>5.3.22</spring.version>
     <spring.security.version>5.7.2</spring.security.version>
     <fasterxml.jackson.version>2.9.9</fasterxml.jackson.version>
-    <fasterxml.jackson.databind.version>2.9.9.3</fasterxml.jackson.databind.version>
+    <fasterxml.jackson.databind.version>2.15.0</fasterxml.jackson.databind.version>
     <postgres.version>42.2.2</postgres.version>
     <testContainers.version>1.10.2</testContainers.version>
     <forkCount>4</forkCount>
@@ -114,7 +114,7 @@
       <dependency>
         <groupId>commons-beanutils</groupId>
         <artifactId>commons-beanutils</artifactId>
-        <version>1.9.3</version>
+        <version>1.9.4</version>
         <exclusions>
           <exclusion>
             <groupId>commons-collections</groupId>
